@@ -49,21 +49,21 @@ Once you have setup an environment with the correct dependencies you can install
 
 ```bash
 conda activate mlatticeabc
-git clone https://github.com/Yuxinya/liyuxin
-cd liyuxin
+git clone https://github.com/usccolumbia/MLatticeABC
+cd MLatticeABC
 pip install -e .
 ```
 
-Pre-trained models are stored in google drive. Download the file `model.zip` from from the [drive](https://drive.google.com/file/d/1rIdu_ZvhQ5iGQkrSY5Uh3yLH_L1uel4U/view?usp=sharing). After downing the file copy it to `liyuxin` and extract it. the folder of `Model` should be in the `liyuxin` directory after the extraction is completed.
+Pre-trained models are stored in google drive. Download the file `model.zip` from from the [drive](https://drive.google.com/file/d/1rIdu_ZvhQ5iGQkrSY5Uh3yLH_L1uel4U/view?usp=sharing). After downing the file, copy it to `MLatticeABC` and extract it. the `Model` folder should be in the `MLatticeABC` directory after the extraction is completed.
 ## Example Use
 
-In order to test your installation you can do so by running the following example from your `mlatticeabc` directory:
+In order to test your installation you can run the following example from your `MLatticeABC` directory:
 
 ```sh
-cd /path/to/liyuxin/
+cd /path/to/MLatticeABC/
 python predict.py -i full_formula -s crystal_system
 
-such as:
+for example:
 python predict.py -i Mn16Zn24Ge24O96 -s cubic
 python predict.py -i Mn16Zn24Ge24O96
 ```
