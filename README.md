@@ -8,7 +8,7 @@ MLatticeABC is a random forest machine learning model with a new feature set com
 If you find our software is useful, please cite it as:<br />
 Yuxin Li, Wenhui Yang, Rongzhi Dong, Jianjun Hu*, MLatticeABC: Generic Lattice Constant Prediction of Inorganic Materials using Machine Learning, Arxiv. 2020
 
-Developed at<br />
+Developed in 2020.9-10 at <br />
 School of Mechanical Engineering<br />
 Guizhou University, Guiyang, China <br />
 
@@ -29,7 +29,7 @@ Tetragonal    | 13188          | 1466          | 0.846±0.024 |             | 0.
 Orthorhombic  | 24120          | 2681          | 0.770±0.019 | 0.579±0.074 | 0.638±0.028 |
 Monoclinic    | 26884          | 2988          | 0.520±0.021 | 0.507±0.016 | 0.489±0.029 |
 Triclinic     | 13767          | 1530          | 0.800±0.022 | 0.771±0.014 | 0.650±0.056 |
-<img src="performance1.png" width="800">
+<!--- img src="performance1.png" width="800"--->
 
 ## Environment Setup
 
