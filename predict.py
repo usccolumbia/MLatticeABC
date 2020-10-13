@@ -56,18 +56,18 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i','--formula',  type=str, 
                         help="The input crystal formula.")
-    parser.add_argument('-s','--cubic_system',  type=str, default='crystal',
-                        help="The input cubic system.")
+    parser.add_argument('-s','--crystal_system',  type=str, default='crystal',
+                        help="The input crystal system.")
     args = parser.parse_args()
     form = args.formula
-    group = args.cubic_system
+    system = args.crystal_system
     ext_magpie = generate(form)
     m = mlmd(form)
     result = ext_magpie.join(m)
     result = result.drop(['MagpieData minimum SpaceGroupNumber','MagpieData maximum SpaceGroupNumber','MagpieData range SpaceGroupNumber','MagpieData mean SpaceGroupNumber','MagpieData avg_dev SpaceGroupNumber','MagpieData mode SpaceGroupNumber'],axis=1)
     result = result.iloc[:,2:]
     dirs = 'Model'
-    if group == 'crystal' :
+    if system == 'crystal' :
         a =  decompress_pickle(dirs+'/Crystal_a.pbz2')
         b =  decompress_pickle(dirs+'/Crystal_b.pbz2')
         c =  decompress_pickle(dirs+'/Crystal_c.pbz2')
@@ -75,29 +75,29 @@ def main():
         b = b.predict(result)
         c = c.predict(result)
         print('a=',a[0],'b=',b[0],'c=',c[0])
-    if group == 'cubic' or  group == 'Cubic':
+    if system == 'cubic' or  system == 'Cubic':
         forest = decompress_pickle(dirs+'/Cubic.pbz2') #  python predict.py -i K12Mn16O32  -s cubic
         y_pred = forest.predict(result)
         print('a=b=c=',y_pred[0])
-    if group == 'hexagonal' or group == 'Hexagonal':
+    if system == 'hexagonal' or system == 'Hexagonal':
         a = decompress_pickle(dirs+'/Hexagonal_a.pbz2') 
         c = decompress_pickle(dirs+'/Hexagonal_c.pbz2')
         a = a.predict(result)
         c = c.predict(result)
         print('a=b=',a[0],'c=',c[0])
-    if group == 'trigonal' or group == 'Trigonal':
+    if system == 'trigonal' or system == 'Trigonal':
         a = decompress_pickle(dirs+'/Trigonal_a.pbz2')
         c = decompress_pickle(dirs+'/Trigonal_c.pbz2')
         a = a.predict(result)
         c = c.predict(result)
         print('a=b=',a[0],'c=',c[0])
-    if group == 'tetragonal' or group == 'Tetragonal':
+    if system == 'tetragonal' or system == 'Tetragonal':
         a = decompress_pickle(dirs+'/Tetragonal_a.pbz2')
         c = decompress_pickle(dirs+'/Tetragonal_c.pbz2')
         a = a.predict(result)
         c = c.predict(result)
         print('a=b=',a[0],'c=',c[0])
-    if group == 'orthorhombic' or group == 'Orthorhombic':
+    if system == 'orthorhombic' or system == 'Orthorhombic':
         a = decompress_pickle(dirs+'/Orthorhombic_a.pbz2')
         b = decompress_pickle(dirs+'/Orthorhombic_b.pbz2')
         c = decompress_pickle(dirs+'/Orthorhombic_c.pbz2')
@@ -105,7 +105,7 @@ def main():
         b = b.predict(result)
         c = c.predict(result)
         print('a=',a[0],'b=',b[0],'c=',c[0])
-    if group == 'monoclinic' or group == 'Monoclinic':
+    if system == 'monoclinic' or system == 'Monoclinic':
         a = decompress_pickle(dirs+'/Monoclinic_a.pbz2')
         b = decompress_pickle(dirs+'/Monoclinic_b.pbz2')
         c = decompress_pickle(dirs+'/Monoclinic_c.pbz2')
@@ -113,7 +113,7 @@ def main():
         b = b.predict(result)
         c = c.predict(result)
         print('a=',a[0],'b=',b[0],'c=',c[0])
-    if group == 'triclinic' or group == 'Triclinic':
+    if system == 'triclinic' or system == 'Triclinic':
         a = decompress_pickle(dirs+'/Triclinic_a.pbz2')
         b = decompress_pickle(dirs+'/Triclinic_b.pbz2')
         c = decompress_pickle(dirs+'/Triclinic_c.pbz2')
