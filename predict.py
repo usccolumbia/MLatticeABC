@@ -35,13 +35,13 @@ def mlmd(x):
 	comp=Composition(x)
 	most=comp.num_atoms
 	data=np.array(list(comp.as_dict().values()))
-	l = len(data)
+
 	s = sum(data)
 	a = max(data)
 	i = min(data)
 	m = np.mean(data)
 	v = np.var(data)
-	ls.append([most,a,i,m,v,l])
+	ls.append([most,a,i,m,v])
 	df = pd.DataFrame(ls)
 	return(df)
 
