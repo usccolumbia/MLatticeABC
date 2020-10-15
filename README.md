@@ -55,7 +55,7 @@ cd MLatticeABC
 pip install -e .
 ```
 
-Pre-trained models are stored in google drive. Download the file `model.zip` from from the [figshare](https://figshare.com/s/af11c43cdae7d239e4cf). After downing the file, copy it to `MLatticeABC` and extract it. the `Model` folder should be in the `MLatticeABC` directory after the extraction is completed.
+Pre-trained models are stored in google drive. Download the file `model.zip` from from the [figshare](https://figshare.com/s/d478c42bbe2e21c045b3). After downing the file, copy it to `MLatticeABC` and extract it. the `Model` folder should be in the `MLatticeABC` directory after the extraction is completed.
 ## Example Use
 
 In order to test your installation you can run the following example from your `MLatticeABC` directory:
