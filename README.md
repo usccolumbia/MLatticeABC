@@ -34,7 +34,7 @@ Triclinic     | 13767          | 1530          | 0.800±0.022 | 0.771±0.014 | 0
 
 ## Environment Setup
 
-To use `MLatticeABC` you need to create an environment with the correct dependencies. Using `Anaconda` this can be accomplished with the follow commands:
+To use `MLatticeABC` you need to create an environment with the correct dependencies. Using `Anaconda` this can be accomplished with the following commands:
 
 ```bash
 conda create --name mlatticeabc python=3.6
