@@ -20,6 +20,7 @@ University of South Carolina, Columbia, USA<br />
 
 ## Performance on Materials Project dataset
 
+Our model trained by the data in [figshare](https://figshare.com/s/167275cf3dcf3ed90296).
 Prediction performance of MLatticeABC  in terms of R2 score for a,b,c over different crystal systems （10 repeats of random split 9:1)
 |Crystal system|train set size  |  test set size |      a       |    b         |       c      |
 |-------------|----------------|---------------|-------------|-------------|-------------|
