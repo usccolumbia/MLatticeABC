@@ -32,11 +32,7 @@ for i in range(10):
 
 	x_train, x_test, y_train, y_test  = train_test_split(x,y,test_size=0.1)
 
-	forest=RandomForestRegressor(n_estimators=50,
-								 # min_samples_split=10,
-	                             criterion='mse',
-	                             # min_samples_leaf=2,
-	                             n_jobs=-1)
+	forest=RandomForestRegressor(n_estimators=100, max_features=70, max_depth=32, min_samples_split=8, criterion='mse', min_samples_leaf=1,n_jobs=-1)
 
 	forest.fit(x_train,y_train)
 	y_pred=forest.predict(x_test)
